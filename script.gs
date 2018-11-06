@@ -1,6 +1,6 @@
 /*
 
-daily timer Ïðàâêà -> Òðèããåðû triggers runList() function to search the mailbox for new detpol notifications to add them into google calendar as new events
+daily timer Edit -> Triggers triggers runList() function to search the mailbox for new detpol notifications to add them into google calendar as new events
 
 */
 
@@ -40,7 +40,7 @@ function displayMessages(response){
       var request = Gmail.Users.Messages.get('me',body.id);
       //Logger.log("- %s", request.snippet);
       // detect visitor's name
-      var name = request.snippet.match(/(?:(([à-ÿÀ-ß¨¸³,]+\s+){3}))/);
+      var name = request.snippet.match(/(?:(([Ã -Ã¿Ã€-ÃŸÂ¨Â¸Â³,]+\s+){3}))/);
       //get message date {DD-MM-YYYY HH:MM}
       var date_str = request.snippet.match(/(\d{2})\-(\d{2})\-(\d{4}) (\d{2}):(\d{2})/);
       //get the full date from object
